@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "oBulb",
     "eventList": [
-        
+        {
+            "id": "e3a7d759-8ee1-4287-8edd-f047cbddc4a7",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "a3c27ebb-a8ab-40d4-8d81-4c4736308dd9",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "595285c7-97f0-474d-bc49-4cfcf4a33824"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

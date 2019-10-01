@@ -285,6 +285,14 @@
                 "resourcePath": "sprites\\sPlayerSingle\\sPlayerSingle.yy",
                 "resourceType": "GMSprite"
             }
+        },
+        {
+            "Key": "fd6a054b-19a1-420c-a780-723bbf7d8278",
+            "Value": {
+                "id": "3bc76484-0148-4ce3-8688-5913547314e9",
+                "resourcePath": "objects\\oCamera\\oCamera.yy",
+                "resourceType": "GMObject"
+            }
         }
     ],
     "script_order": [

@@ -35,7 +35,7 @@ y += vspeed_;
 //Animation
 if (!place_meeting(x,y+1,oBlock))
 {
-	sprite_index = sPlayerIdle;
+	sprite_index = sprite_idle;
 	image_speed = 0;
 	if (sign(vspeed_) > 0) image_index = 1; else image_index = 0;
 }
@@ -44,11 +44,11 @@ else
 	image_speed = 1;
 	if (hinput == 0)
 	{
-		sprite_index = sPlayerIdle;
+		sprite_index = sprite_idle;
 	}
 	else
 	{
-		sprite_index = sPlayerRun;
+		sprite_index = sprite_run;
 	}
 }
 

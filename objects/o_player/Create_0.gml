@@ -7,6 +7,10 @@ acceleration_ = 1;
 friction_ = .3;
 jump_height_ = -7;
 
+// Sprite Variables
+sprite_idle = sPlayerIdle;
+sprite_run = sPlayerRun;
+
 // Map the keys
 keyboard_set_map(ord("W"), vk_up);
 keyboard_set_map(ord("A"), vk_left);
