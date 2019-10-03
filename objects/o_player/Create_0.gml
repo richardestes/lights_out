@@ -11,6 +11,8 @@ jump_height_ = -7;
 sprite_idle = sPlayerIdle;
 sprite_run = sPlayerRun;
 
+sprinting = false;
+
 // Map the keys
 keyboard_set_map(ord("W"), vk_up);
 keyboard_set_map(ord("A"), vk_left);

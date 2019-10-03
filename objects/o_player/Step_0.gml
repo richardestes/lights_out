@@ -53,3 +53,29 @@ else
 }
 
 if (hspeed_ != 0) image_xscale = sign(hspeed_);
+
+var button = vk_shift;
+if keyboard_check(button)
+{
+    sprinting = true;
+}
+
+if (sprinting)
+{
+    max_hspeed_ = 6;
+}
+else
+{
+    max_hspeed_ = 4;
+}
+
+if (speed == 0)
+{
+    // player stopped moving
+    sprinting = false
+}
+
+// Respawn System
+if(bbox_right > room_width) || (bbox_left < 0) || (bbox_bottom > room_height) || (bbox_top < 0) {
+    room_restart();
+}
