@@ -1,5 +1,7 @@
 /// @description Player Movement
 var hinput = keyboard_check(vk_right) - keyboard_check(vk_left);
+var key_jump = keyboard_check_pressed(vk_space);
+var key_jump_held = keyboard_check(vk_space);
 
 if hinput != 0 {
 	hspeed_ += hinput*acceleration_;
@@ -12,10 +14,16 @@ if !place_meeting(x, y+1, oBlock) {
 	vspeed_ += gravity_;
 } else {
 	if keyboard_check_pressed(vk_up) || keyboard_check_pressed(vk_space) {
-		vspeed_ = jump_height_;
+		jump = true;
+		vspeed_ = -jump_height_;
 	}
 }
+// Dynamic Jump Height System
+if (vspeed_ < 0) && (!key_jump_held)
+	vspeed_ = max(vspeed_, -jump_height_/4)
+	
 
+// Horizontal Movement
 if place_meeting(x+hspeed_, y, oBlock) {
 	while !place_meeting(x+sign(hspeed_), y, oBlock) {
 		x += sign(hspeed_);
@@ -63,10 +71,12 @@ if keyboard_check(button)
 if (sprinting)
 {
     max_hspeed_ = 6;
+	jump_height_ = 8;
 }
 else
 {
     max_hspeed_ = 4;
+	jump_height_ = 7;
 }
 
 if (speed == 0)

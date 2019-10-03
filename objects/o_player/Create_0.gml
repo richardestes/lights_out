@@ -5,13 +5,14 @@ vspeed_ = 0;
 gravity_ = .5;
 acceleration_ = 1;
 friction_ = .3;
-jump_height_ = -7;
+jump_height_ = 7;
 
 // Sprite Variables
 sprite_idle = sPlayerIdle;
 sprite_run = sPlayerRun;
 
 sprinting = false;
+jump = false;
 
 // Map the keys
 keyboard_set_map(ord("W"), vk_up);
